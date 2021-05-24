@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(0, 0, 0, 0.9);
+	z-index: 10;
+}
+.container {
+	display: grid;
+	position: absolute;
+	top: 10vh;
+	left: 20%;
+	width: 60%;
+	grid-template-columns: 1fr;
+	place-items: center;
+	row-gap: 20px;
+	margin: 0 auto;
+	z-index: 100;
+}
+.container h2 {
+	color: #c9d1d9;
+	font-size: 15px;
+	font-weight: lighter;
+	width: 100%;
+	text-align: center;
+}
+.container .img {
+	background-color: #fff;
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.26);
+}
+.container .img img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+.error {
+	width: 100%;
+	padding: 10px;
+	background-color: rgb(37, 24, 28);
+	border-radius: 5px;
+	border: 1px solid red;
+	color: red;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	transition: all 0.1s ease-in;
+}
+.error h2 {
+	color: red;
+	font-weight: bold;
+	cursor: pointer;
+}
+.input {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	background-color: #161b22;
+	padding: 2.5rem 1.5rem;
+	border-radius: 5px;
+	row-gap: 14px;
+}
+.input label {
+	color: #c9d1d9;
+}
+.input input {
+	border-radius: 10px;
+	padding: 10px;
+	outline: none;
+	border: 2px solid transparent;
+	background: #000;
+	color: #fff;
+	width: 100%;
+}
+.input input:focus {
+	border: 2px solid #388bfd;
+	box-shadow: 0 2px 2px #0c2d6b;
+}
+button {
+	padding: 10px;
+	background: rgb(46, 158, 66, 0.8);
+	color: #fff;
+	border-radius: 10px;
+	font-weight: bolder;
+	outline: none;
+	border: none;
+	width: 100%;
+	letter-spacing: 1.4px;
+	display: grid;
+	place-items: center;
+}
+.input button:hover {
+	background: rgb(46, 158, 66, 1);
+}
+section header .error {
+	width: 100%;
+	background-color: red;
+}
+@media (min-width: 768px) {
+	.container {
+		left: calc(50% - 10rem);
+		width: 20rem;
+	}
+}
+section {
+	position: relative;
+	z-index: 10000;
+	min-height: 100vh;
+	background: #fff;
+	width: 100%;
+}
+section header {
+	padding: 0.5rem 1rem;
+	border-bottom: 1px solid #ccc;
+}
+section header .nav {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+section header .nav a {
+	text-decoration: none;
+}
+section header .nav img {
+	width: 15px;
+	height: 15px;
+}
+section header .nav .repo {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	place-items: center;
+	column-gap: 5px;
+	width: 119px;
+	border-bottom: 2px solid transparent;
+	justify-self: center;
+}
+section header .nav .repo:hover {
+	border-bottom: 2px solid rgba(207, 19, 19, 0.918);
+}
+section header .nav .repo a {
+	color: #000;
+	font-size: 13px;
+}
+section header .nav .repo span {
+	font-size: 13px;
+}
+section header .nav li {
+	justify-self: end;
+}
+section header .nav button {
+	width: auto;
+	letter-spacing: 0.5px;
+	font-weight: 400;
+}
+section .displayContent {
+	width: 95%;
+	max-width: 95%;
+	margin: 0 auto;
+	background: red;
+	min-height: 10vh;
+	display: grid;
+	glyph-orientation-vertical: auto 1fr;
+}
